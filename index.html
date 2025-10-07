@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avexo - Convert Bank Statements to Excel in 90 Seconds</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0b0c10;
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+    header h1 {
+      font-size: 3rem;
+      color: #5eead4;
+    }
+    header p {
+      color: #ccc;
+      margin: 1rem 0;
+      font-size: 1.1rem;
+    }
+    .highlight { color: #00ffd0; }
+
+    .waitlist {
+      margin: 2rem auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .waitlist input {
+      padding: 0.8rem 1rem;
+      border: none;
+      border-radius: 8px 0 0 8px;
+      outline: none;
+      width: 280px;
+    }
+    .waitlist button {
+      background: #00ffd0;
+      color: #000;
+      border: none;
+      padding: 0.8rem 1.2rem;
+      font-weight: 600;
+      border-radius: 0 8px 8px 0;
+      cursor: pointer;
+    }
+    .section {
+      max-width: 1100px;
+      margin: 4rem auto;
+      padding: 1rem;
+      text-align: center;
+    }
+    .section h2 {
+      color: #ff7e33;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: #15171c;
+      padding: 1.5rem;
+      border-radius: 12px;
+      border: 1px solid #222;
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #00ffd0;
+    }
+    .card h3 {
+      color: #00ffd0;
+      margin-bottom: 0.5rem;
+    }
+
+    .solution {
+      background: #111317;
+      padding: 4rem 1rem;
+    }
+    .solution h2 { color: #5eead4; }
+
+    .stats {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-top: 2rem;
+    }
+    .stats span:first-child { color: #ff7e33; }
+    .stats span:last-child { color: #00ffd0; }
+
+    .how {
+      background: #0f1116;
+      padding: 4rem 1rem;
+    }
+    .steps {
+      max-width: 900px;
+      margin: auto;
+      text-align: left;
+    }
+    .step {
+      background: #15171c;
+      padding: 1rem 1.5rem;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      border-left: 4px solid #00ffd0;
+    }
+    .step h4 { color: #00ffd0; }
+
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .testimonial {
+      background: #15171c;
+      padding: 1.5rem;
+      border-radius: 10px;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      background: #090a0d;
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #777;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: #00ffd0;
+      text-decoration: none;
+    }
+    .message {
+      margin-top: 1rem;
+      padding: 0.8rem;
+      border-radius: 8px;
+      text-align: center;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      display: none;
+    }
+    .message.success {
+      background: rgba(0, 255, 208, 0.1);
+      color: #00ffd0;
+      border: 1px solid #00ffd0;
+    }
+    .message.error {
+      background: rgba(255, 126, 51, 0.1);
+      color: #ff7e33;
+      border: 1px solid #ff7e33;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p>🚀 Coming Soon</p>
+    <h1>Avexo</h1>
+    <p>Convert Bank Statements to Excel in <span class="highlight">90 Seconds</span></p>
+    <div class="waitlist">
+      <input type="email" id="emailInput" placeholder="your@email.com">
+      <button id="joinBtn">Join Waitlist →</button>
+    </div>
+    <div id="message" class="message"></div>
+  </header>
+
+  <section class="section">
+    <h2>The Problem We're Solving</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Hours of Manual Entry</h3>
+        <p>Typing transactions from PDFs wastes 2+ hours per statement.</p>
+      </div>
+      <div class="card">
+        <h3>Costly Errors</h3>
+        <p>Manual entry leads to 10% error rates and penalties over ₹50K.</p>
+      </div>
+      <div class="card">
+        <h3>Can’t Scale</h3>
+        <p>Handling more clients means higher costs and lower growth.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="solution">
+    <h2>The Solution: Avexo</h2>
+    <div class="stats">
+      <span>4 hours →</span>
+      <span>90 sec</span>
+    </div>
+    <div class="cards" style="margin-top: 2rem;">
+      <div class="card"><h3>10x Faster</h3><p>90 seconds vs 4 hours.</p></div>
+      <div class="card"><h3>95% Accurate</h3><p>AI-powered extraction.</p></div>
+      <div class="card"><h3>Bank-Grade Security</h3><p>Your data stays encrypted.</p></div>
+      <div class="card"><h3>Save ₹50K+</h3><p>Monthly cost savings.</p></div>
+    </div>
+  </section>
+
+  <section class="how">
+    <h2 style="text-align:center; color:#5eead4;">How It Works</h2>
+    <div class="steps">
+      <div class="step"><h4>1. Upload Statement</h4><p>Upload your bank statement PDF securely.</p></div>
+      <div class="step"><h4>2. AI Extracts Data</h4><p>AI identifies transactions, amounts, and categories.</p></div>
+      <div class="step"><h4>3. Review & Edit</h4><p>Make quick corrections if needed.</p></div>
+      <div class="step"><h4>4. Download & Use</h4><p>Export to Excel, Tally XML, or PDF instantly.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Join 500+ Forward-Thinking CAs</h2>
+    <div class="testimonials">
+      <div class="testimonial">“This tool saved me 4+ hours each week. Total game-changer.”</div>
+      <div class="testimonial">“Accuracy is incredible. Handles even complex statements easily.”</div>
+      <div class="testimonial">“Clean insights in minutes, no manual entry.”</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Avexo. All rights reserved. Made with ❤️ for CAs and SMEs.</p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Contact</a> | <a href="admin.html">Admin</a></p>
+  </footer>
+
+  <script>
+    const emailInput = document.getElementById('emailInput');
+    const joinBtn = document.getElementById('joinBtn');
+    const messageDiv = document.getElementById('message');
+
+    function showMessage(text, type) {
+      messageDiv.textContent = text;
+      messageDiv.className = `message ${type}`;
+      messageDiv.style.display = 'block';
+      
+      setTimeout(() => {
+        messageDiv.style.display = 'none';
+      }, 5000);
+    }
+
+    async function joinWaitlist() {
+      const email = emailInput.value.trim();
+
+      if (!email) {
+        showMessage('Please enter your email address', 'error');
+        return;
+      }
+
+      // Basic email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        showMessage('Please enter a valid email address', 'error');
+        return;
+      }
+
+      // Disable button and show loading state
+      joinBtn.disabled = true;
+      joinBtn.textContent = 'Joining...';
+
+      try {
+        const response = await fetch('http://localhost:3000/api/waitlist', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email }),
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+          showMessage(data.message, 'success');
+          emailInput.value = '';
+        } else {
+          showMessage(data.message, 'error');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        showMessage('Failed to join waitlist. Please make sure the server is running.', 'error');
+      } finally {
+        joinBtn.disabled = false;
+        joinBtn.textContent = 'Join Waitlist →';
+      }
+    }
+
+    // Add click event listener
+    joinBtn.addEventListener('click', joinWaitlist);
+
+    // Add Enter key support
+    emailInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        joinWaitlist();
+      }
+    });
+  </script>
+</body>
+</html>
